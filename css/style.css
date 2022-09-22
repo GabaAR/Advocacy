@@ -88,7 +88,7 @@ nav {
     font-size: 1.2em;
    
     letter-spacing: 2px;
-    color: #fff;
+    color: #17a2b8;
 }
 .pad {
     margin-left: 180px;
@@ -230,11 +230,88 @@ nav {
 
 .card .content .details .actionBtn button:nth-child(2){
     border: 1px solid #999;
-    color: #999;
+    color: #17a2b8;
     background: #fff;
 }
 
 .titulo{
     color: #fff;
     text-shadow: 3px 3px 10px #23232e;
+}
+
+.ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    margin-left: 2%;
+}
+.ul .li:hover{
+    z-index: 10000;
+    transform: scale(0.75);
+}
+
+.ul .li {
+    position: relative;
+    list-style: none;
+    text-decoration: none;
+    font-style: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.ul .li::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    box-shadow: 0 0 0 10px var(--clr),
+        0 0 0 20px var(--bg),
+        0 0 0 22px var(--clr);
+    transition: 0.5s;
+}
+.ul .li:hover::before{
+    inset: 0px;
+}
+.ul .li::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    transform: rotate(45deg);
+}
+
+.ul .li .a {
+    text-decoration: none;
+    position: relative;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+.ul .li:hover .a {
+    font-size: 3em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr));
+}
+.titu{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    color: #fff;
+    text-shadow: 3px 3px 5px #222;
+}
+.sm{
+    box-shadow: 3px 10px 120px #23232e;
+}
+.tit{
+    text-align: center;
+    justify-content: justify;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 3px 3px 5px #222;
 }
